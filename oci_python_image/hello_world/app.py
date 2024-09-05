@@ -1,4 +1,5 @@
 import cowsay
+from pydantic import BaseModel
 
 class Cow:
     def __init__(self, name):

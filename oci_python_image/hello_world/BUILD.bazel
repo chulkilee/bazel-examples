@@ -15,6 +15,7 @@ py_library(
     visibility = ["//:__subpackages__"],
     deps = [
         requirement("cowsay"),
+        requirement("pydantic"),
     ],
 )
 
@@ -38,7 +39,7 @@ py_oci_image(
     name = "image",
     base = "@ubuntu",
     binary = "hello_world",
-    entrypoint = ["/hello_world/hello_world"],
+    cmd = ["/hello_world/hello_world"],
 )
 
 platform(
